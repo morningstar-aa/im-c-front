@@ -17,6 +17,12 @@ jobs:
     - name: Add MSBuild to PATH
       uses: microsoft/setup-msbuild@v2
 
+    - name: Clone JsonCpp
+      run: |
+        git clone https://github.com/open-source-parsers/jsoncpp.git third_party/jsoncpp
+        cd third_party/jsoncpp
+        git checkout 1.9.5
+
     - name: Build Solution
       run: msbuild nim_win_demo/nim.sln /p:Configuration=Release /p:Platform=Win32 /p:PlatformToolset=v142
       # 注意：原始项目使用的是 v120_xp，GitHub Actions 运行器可能不支持。
