@@ -68,30 +68,6 @@ NIM_SDK_DLL_API void nim_team_invite_async(const char *tid,
 	nim_team_opt_cb_func cb, 
 	const void *user_data);
 
-/** @fn void nim_team_invite_async2(const char *tid, const char *jsonlist_uids, const char *invitation_postscript, const char *invitation_attachment,const char *json_extension, nim_team_opt_cb_func cb, const void *user_data)
-  * 邀请
-  * @param[in] tid		群组id
-  * @param[in] jsonlist_uids		uids string array
-  * @param[in] invitation_postscript 邀请附言
-  * @param[in] invitation_attachment 用户可自定义的补充邀请信息
-  * @param[in] json_extension json扩展参数（备用，目前不需要）
-  * @param[in] cb		邀请的回调函数, nim_team_opt_cb_func回调函数定义见nim_team_def.h
-  * @param[in] user_data APP的自定义用户数据，SDK只负责传回给回调函数cb，不做任何处理！
-  * @return void 无返回值
-  * @note 错误码	200:成功
-  *				810:如果是高级群，返回810表示邀请成功并带上timetag
-  *				404:非法用户
-  *				801:群人数超限
-  *				802:没有权限
-  *				803:群不存在
-  */
-NIM_SDK_DLL_API void nim_team_invite_async2(const char *tid,
-	const char *jsonlist_uids,
-	const char *invitation_postscript,
-	const char *invitation_attachment,
-	const char *json_extension,
-	nim_team_opt_cb_func cb,
-	const void *user_data);
 /** @fn void nim_team_kick_async(const char *tid, const char *jsonlist_uids, const char *json_extension, nim_team_opt_cb_func cb, const void *user_data)
   * 踢人
   * @param[in] tid		群组id

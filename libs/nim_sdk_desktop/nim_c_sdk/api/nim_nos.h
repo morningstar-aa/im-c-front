@@ -214,16 +214,6 @@ NIM_SDK_DLL_API void nim_nos_stop_upload_ex(const char *task_id, const char *jso
 */
 NIM_SDK_DLL_API void nim_nos_set_quick_trans(int quick_trans);
 
-/** @fn void nim_nos_safeurl_to_originurl(const char *safe_url, const char *json_extension, nim_nos_safeurl_to_originurl_cb_func callback_result, const void *user_data);
-* 安全链接(短链)换源链接
-* @param[in] safe_url 安全链接(短链)
-* @param[in] json_extension 扩展字段
-* @param[in] callback_result 查询 结果 回调
-* @param[in] user_data 自定义数据，SDK只负责传回给回调函数callback_result，不做任何处理
-* @return void 无返回值
-* @note callback_result 200成功,404不存在的短链或不是有效的短链
-*/
-NIM_SDK_DLL_API void nim_nos_safeurl_to_originurl(const char *safe_url, const char *json_extension, nim_nos_safeurl_to_originurl_cb_func callback_result, const void *user_data);
 
 #ifdef __cplusplus
 };

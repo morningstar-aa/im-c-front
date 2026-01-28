@@ -111,7 +111,7 @@ NIM_SDK_DLL_API void nim_session_set_extend_data(enum NIMSessionType to_type, co
   */
 NIM_SDK_DLL_API void nim_session_reset_all_unread_count_async(const char *json_extension, nim_session_change_cb_func cb, const void *user_data);
 
-/** @fn void nim_session_query_sessiondata_by_id_async(enum NIMSessionType to_type, const char *id, const char *json_extension, nim_session_query_sessiondata_by_id_cb_func cb, const void *user_data);
+/** @fn void nim_session_query_sessiondata_by_id_async(enum NIMSessionType to_type, const char *id, const char *json_extension, nim_session_change_cb_func cb, const void *user_data);
   * 根据给定的id查询相应会话的信息
 * @param[in] to_type		会话类型
   * @param[in] id			对方的account id或者群组tid。

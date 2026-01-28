@@ -328,43 +328,6 @@ NIM_SDK_DLL_API void nim_msglog_update_localext_async(const char *msg_id, const 
   */
 NIM_SDK_DLL_API void nim_msglog_read_all_async(const char *json_extension, nim_msglog_modify_res_cb_func cb, const void *user_data);
 
-/** @fn bool nim_export_backup_to_remote(const NIMLogsBackupExportInfo* export_info)
-	* 导出本地消息记录到云端
-	* @param[in] export_info 导出需要的参数参考NIMLogsBackupExportInfo定义
-	* @return bool false : 当前有导入/导出操作正在进行中
-	*/
-NIM_SDK_DLL_API bool nim_export_backup_to_remote(const NIMLogsBackupExportInfo* export_info);
-
-/** @fn bool nim_import_backup_from_remote(const NIMLogsBackupImportInfo* import_info)
-	* 导入已备份在云端的消息记录
-	* @param[in] export_info 导入需要的参数参考NIMLogsBackupImportInfo定义
-	* @return bool false : 当前有导入/导出操作正在进行中
-	*/
-NIM_SDK_DLL_API bool nim_import_backup_from_remote(const NIMLogsBackupImportInfo* import_info);
-
-/** @fn void nim_cancel_import_backup_from_remote()
-* 取消导入已备份在云端的消息记录
-* @return void
-*/
-NIM_SDK_DLL_API void nim_cancel_import_backup_from_remote();
-
-/** @fn void nim_cancel_export_backup_to_remote()
-* 取消导出本地消息记录到云端
-* @return void
-*/
-NIM_SDK_DLL_API void nim_cancel_export_backup_to_remote();
-/** @fn void nim_msglog_delete_history_online_async(const char *account_id, bool delete_roaming, const char *json_extension, nim_msglog_delete_history_online_res_cb_func cb, const void *user_data)
-  * 删除与某账号的所有云端历史记录与漫游消息
-  * @param[in] account_id 对方accid
-  * @param[in] delete_roaming 是否同时删除与该accid的漫游消息
-  * @param[in] json_extension json扩展参数（备用，目前不需要）
-  * @param[in] cb			操作结果的回调函数， nim_msglog_delete_history_online_res_cb_func回调函数定义见nim_msglog_def.h
-  * @param[in] user_data	APP的自定义用户数据，SDK只负责传回给回调函数cb，不做任何处理！
-  * @return void 无返回值
-  * @note 错误码	200:成功
-  */
-NIM_SDK_DLL_API void nim_msglog_delete_history_online_async(const char *account_id, bool delete_roaming, const char *json_extension, nim_msglog_delete_history_online_res_cb_func cb, const void *user_data);
-
 #ifdef __cplusplus
 };
 #endif //__cplusplus

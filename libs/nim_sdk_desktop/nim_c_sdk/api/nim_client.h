@@ -34,14 +34,6 @@ NIM_SDK_DLL_API	bool nim_client_init(const char *app_data_dir, const char *app_i
   */
 NIM_SDK_DLL_API	void nim_client_cleanup(const char *json_extension);
 
-/** @fn void nim_client_cleanup2(nim_json_transport_cb_func cb,const char *json_extension)
-  * NIM SDK清理，传入的JSON参数定义见nim_client_def.h
-  * @param[in] cb 清理的回调函数， nim_json_transport_cb_func回调函数定义见nim_global_def.h
-  * @param[in] json_extension json扩展参数（备用，目前不需要）
-  * @return void 无返回值
-  */
-NIM_SDK_DLL_API	void nim_client_cleanup2(nim_json_transport_cb_func cb,const char *json_extension);
-
 /** @fn void nim_client_update_apns_token(const char *device_token)   
   * (PC SDK该接口无效)更新Device Token，iOS推送使用    
   * @param[in] device_token device token
