@@ -28,9 +28,9 @@ ChangesAssociations=yes
 DisableProgramGroupPage=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only).
 ;PrivilegesRequired=lowest
-OutputDir=D:\git-repo\nim_v6\@publish
+OutputDir=.
 OutputBaseFilename=鹦鹉v2-{#MyAppVersion}-Installer
-SetupIconFile=D:\git-repo\nim_v6\@publish\setup.ico
+SetupIconFile=setup.ico
 SolidCompression=yes
 WizardStyle=modern
 PrivilegesRequired=admin
@@ -45,8 +45,8 @@ Name: "chinesesimplified"; MessagesFile: "compiler:Languages\ChineseSimplified.i
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}";
 
 [Files]
-Source: "D:\git-repo\nim_v6\bin\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\git-repo\nim_v6\bin\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Excludes: "{#MyAppName}.pdb, 振兴.exe, 振兴.pdb"
+Source: "..\bin\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\bin\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Excludes: "{#MyAppName}.pdb, 振兴.exe, 振兴.pdb"
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]
