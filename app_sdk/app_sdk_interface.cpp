@@ -6,7 +6,7 @@
 #include "app_sdk_config_helper.h"
 namespace app_sdk
 {
-	const std::string AppSDKInterface::kAppKey = "ffa0f1220af874817a81d317e6218e23";//bc4bc49b41487bc1160a0fa9ec296c6b
+	const std::string AppSDKInterface::kAppKey = "73d074339715c1339640f92f96148de1";//bc4bc49b41487bc1160a0fa9ec296c6b
 	const std::string AppSDKInterface::kAppHost = "https://bnbx.me";//http://13.248.245.109:30001/index.php
 	const std::string AppSDKInterface::kAppVersion = "2.1.2.9";
 
